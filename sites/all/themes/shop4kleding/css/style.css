@@ -19,14 +19,9 @@ a:active,
 a:focus {
   text-decoration: underline;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 1.0em 0 0.5em;
-  font-weight: inherit;
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+	padding: 0px;
 }
 h1 {
   font-size: 1.357em;
@@ -207,13 +202,9 @@ tr th {
   border-color: rgba(255, 255, 255, 0.18);
 }
 tr.odd {
-  background: #e4e4e4;
-  background: rgba(0, 0, 0, 0.105);
 }
 tr,
 tr.even {
-  background: #efefef;
-  background: rgba(0, 0, 0, 0.063);
 }
 table ul.links {
   margin: 0;
@@ -292,10 +283,7 @@ ul.tips {
 #skip-link a:focus {
   outline: 0;
 }
-#logo {
-  float: left; /* LTR */
-  padding: 15px 15px 15px 10px; /* LTR */
-}
+
 #name-and-slogan {
   float: left; /* LTR */
   padding-top: 34px;
@@ -457,46 +445,65 @@ h1#site-name {
 /* --------------- Main Menu ------------ */
 
 #main-menu {
-  clear: both;
+	margin-left: 290px;
+	padding-top:  60px;
 }
-#main-menu-links {
-  font-size: 0.929em;
-  margin: 0;
-  padding: 0 15px;
-}
-#main-menu-links li {
-  float: left; /* LTR */
+
+#main-menu ul.menu li 
+{
+  float: left;
   list-style: none;
-  padding: 0 1px;
-  margin: 0 1px;
+  margin-right: 5px;
+  position: relative;
 }
-#main-menu-links a {
-  color: #333;
-  background: #ccc;
-  background: rgba(255, 255, 255, 0.7);
-  float: left; /* LTR */
-  height: 2.4em;
-  line-height: 2.4em;
-  padding: 0 0.8em;
-  text-decoration: none;
-  text-shadow: 0 1px #eee;
-  -khtml-border-radius-topleft: 8px;
-  -khtml-border-radius-topright: 8px;
-  -moz-border-radius-topleft: 8px;
-  -moz-border-radius-topright: 8px;
-  -webkit-border-top-left-radius: 8px;
-  -webkit-border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+
+#main-menu ul.menu li a 
+{
+	color: #000000;
+	font-size: 15px;
+	display: block;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 40px;
+	line-height: 38px;
 }
+
+#main-menu ul.menu li a:hover, #main-menu ul.menu li a.active
+{
+  background: #000000;
+  color: #ffffff;
+}
+
+#main-menu ul.menu li:hover ul.menu
+{
+	display: block;
+	
+}
+
+#main-menu ul.menu li ul.menu
+{
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  z-index: 10;
+  top: 40px;
+  left: 0px;
+  display: none;
+} 
+
+
+#logo
+{
+	float: left;
+	padding-top: 10px;
+}
+
 #main-menu-links a:hover,
 #main-menu-links a:focus {
-  background: #f6f6f2;
-  background: rgba(255, 255, 255, 0.95);
 }
 #main-menu-links a:active {
-  background: #b3b3b3;
-  background: rgba(255, 255, 255, 1);
+  background: #000000;
+  color: #ffffff;
 }
 #main-menu-links li a.active {
   border-bottom: none;
@@ -511,7 +518,6 @@ h1#site-name {
 
 #secondary-menu-links {
   float: right; /* LTR */
-  font-size: 0.929em;
   margin: 10px 10px 0;
 }
 #secondary-menu-links a:hover,
@@ -520,6 +526,11 @@ h1#site-name {
 }
 
 /* ------------------- Main ------------------- */
+#mainwrap
+{
+  background: url(../images/mainbg.png) repeat-x top;
+
+}
 
 #main {
   margin-top: 20px;
@@ -751,13 +762,12 @@ ul.links {
   padding-top: 10px;
 }
 .sidebar .block {
-  border: 1px solid;
-  padding: 15px 20px;
+  border: none;
+  padding: 3px;
   margin: 0 0 20px;
 }
 .sidebar h2 {
   margin: 0 0 0.5em;
-  border-bottom: 1px solid #d6d6d6;
   padding-bottom: 5px;
   text-shadow: 0 1px 0 #fff;
   font-size: 1.071em;
@@ -1647,4 +1657,9 @@ div.admin-panel .description {
 }
 #footer-wrapper .poll .bar .foreground {
   background-color: #ddd;
+}
+
+.sliderborder
+{
+	border: 3px solid #b1b0ae;
 }

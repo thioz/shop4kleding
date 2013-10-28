@@ -97,20 +97,9 @@
 
     <?php print render($page['header']); ?>
 
-    <?php if ($main_menu): ?>
+    <?php if ($main_menu_expanded): ?>
       <div id="main-menu" class="navigation">
-        <?php print theme('links__system_main_menu', array(
-          'links' => $main_menu,
-          'attributes' => array(
-            'id' => 'main-menu-links',
-            'class' => array('links', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Main menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
+        <?php print render($main_menu_expanded); ?> 
       </div> <!-- /#main-menu -->
     <?php endif; ?>
 
