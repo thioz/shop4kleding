@@ -117,7 +117,68 @@
 
 }
 
+.productdetail .productinfo
+{
+	float: left;
+	width: 230px;
+	height: 390px;
+	margin-left: 10px;
+	
+}
+.productdetail h3
+{
+	font-size: 14px;
+	font-family: 'ubuntubold', Arial;
+	font-weight: bold;
+}
 
+.productdetail .infosection
+{
+	margin-top: 25px;
+	font-family: 'ubunturegular', Arial;
+	font-size: 12px;
+}
+.productdetail .properties .field-label-inline .field-label
+{
+	width: 100px;
+}
+
+.productdetail .main
+{
+	height: 357px;
+}
+
+.productdetail .price
+{
+	font-size: 32px;
+}
+
+.productdetail .image
+{
+	float: left;
+	
+}
+
+form.commerce-add-to-cart 
+{
+	
+}
+
+.productimages .galleryimage
+{
+	float: left;
+	margin-right: 10px;
+	border: 1px solid #000000;
+}
+
+form.commerce-add-to-cart #edit-submit{
+	background: #f98f0e;
+	border-radius: 7px;
+	font-family: 'ubunturegular', Arial;
+	font-size: 16px;
+	width: 230px;
+	color: #ffffff;
+}
 
 
 @font-face {

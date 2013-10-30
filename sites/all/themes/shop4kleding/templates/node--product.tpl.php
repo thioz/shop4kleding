@@ -77,13 +77,6 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
-
-echo __FILE__;
-echo '<pre>';
-print_r(array_keys($content));
-
-
-echo '</pre>';
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
@@ -95,15 +88,52 @@ echo '</pre>';
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <div class="content clearfix"<?php print $content_attributes; ?>>
+  <div class="content clearfix productdetail"<?php print $content_attributes; ?>>
+		<div class="image"><?php print render($content['product:field_productimage_big'])?></div>
+		<div class="productinfo">
+			<div class="main">
+				<div class="price"><?php print render($content['product:commerce_price']);?></div>
+
+				<div class="description infosection">
+					<h3>Omschrijving</h3>
+					<?php print render($content['product:field_productdescription']);?>
+				</div>
+				<div class="properties infosection">
+					<h3>Kenmerken</h3>
+					
+					<?php print render($content['product:field_conditie']);?>
+					<?php print render($content['product:field_kleur']);?>
+					<?php print render($content['product:field_productsize']);?>
+				</div>
+			</div>
+			<div class="cartform"><?php echo render($content['field_productref'])?></div>
+		</div>
     <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      print render($content);
+      //
     ?>
   </div>
-
+	<div class="productimages clearfix">
+		<?php
+		foreach($content['product:field_image']['#items'] as $image)
+		{
+			
+			
+			?>
+		<div class="galleryimage">
+			<?php 
+			print theme('image_style', array('path' => $image['uri'], 'style_name' => 'thumbnail'));
+			?>
+		</div>
+			<?php
+		}
+		?>
+	 </pre>
+	</div>
+  <div>
+		
+		
+		
+	</div>
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
     // form is being displayed on the same page.
@@ -112,6 +142,7 @@ echo '</pre>';
     }
     // Only display the wrapper div if there are links.
     $links = render($content['links']);
+		
     if ($links):
   ?>
     <div class="link-wrapper">
@@ -121,4 +152,14 @@ echo '</pre>';
 
   <?php print render($content['comments']); ?>
 
+	
+	<?
+echo __FILE__;
+echo '<pre>';
+print_r(array_keys($content));
+
+
+echo '</pre>';
+
+	?>
 </div>

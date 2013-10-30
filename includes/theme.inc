@@ -1018,7 +1018,6 @@ function theme($hook, $variables = array()) {
   }
 
   $hooks = theme_get_registry(FALSE);
-
   // If an array of hook candidates were passed, use the first one that has an
   // implementation.
   if (is_array($hook)) {
@@ -1029,7 +1028,7 @@ function theme($hook, $variables = array()) {
     }
     $hook = $candidate;
   }
-
+	
   // If there's no implementation, check for more generic fallbacks. If there's
   // still no implementation, log an error and return an empty string.
   if (!isset($hooks[$hook])) {
