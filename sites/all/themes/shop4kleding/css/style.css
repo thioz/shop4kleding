@@ -22,6 +22,7 @@ a:focus {
 h1, h2, h3, h4, h5, h6 {
 	margin: 0px;
 	padding: 0px;
+	font-family: 'ubunturegular', Verdana;
 }
 h1 {
   font-size: 1.357em;
@@ -1676,4 +1677,10 @@ div.admin-panel .description {
 .sliderborder
 {
 	border: 3px solid #b1b0ae;
+}
+
+#bottom .block 
+{
+	font-family: 'ubunturegular', Arial;
+	
 }

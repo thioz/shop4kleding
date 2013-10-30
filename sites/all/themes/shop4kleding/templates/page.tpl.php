@@ -102,23 +102,13 @@
         <?php print render($main_menu_expanded); ?> 
       </div> <!-- /#main-menu -->
     <?php endif; ?>
+	
+			<div id="carttop">
+				<a href="/cart" class="checkoutlink"></a>
+				<?php print render($page['carttop']); ?> 
+			</div>
+			
 
-    <?php if ($secondary_menu): ?>
-      <div id="secondary-menu" class="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'id' => 'secondary-menu-links',
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-      </div> <!-- /#secondary-menu -->
-    <?php endif; ?>
 
   </div></div> <!-- /.section, /#header -->
 
@@ -168,15 +158,33 @@
 
   </div></div> <!-- /#main, /#main-wrapper -->
 
-
+  <div id="bottom-wrapper"><div class="section">
+	<div id="bottom" class="clearfix">
+		<?php print render($page['bottom']); ?>
+	</div> <!-- /#footer -->
+  </div></div>
+    <?php if ($secondary_menu): ?>
+      <div id="secondary-menu" class="navigation">
+        <?php print theme('links__system_secondary_menu', array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'id' => 'secondary-menu-links',
+            'class' => array('links', 'inline', 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => t('Secondary menu'),
+            'level' => 'h2',
+            'class' => array('element-invisible'),
+          ),
+        )); ?>
+      </div> <!-- /#secondary-menu -->
+    <?php endif; ?>
   <div id="footer-wrapper"><div class="section">
-
     <?php if ($page['footer']): ?>
       <div id="footer" class="clearfix">
         <?php print render($page['footer']); ?>
       </div> <!-- /#footer -->
     <?php endif; ?>
-
   </div></div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->

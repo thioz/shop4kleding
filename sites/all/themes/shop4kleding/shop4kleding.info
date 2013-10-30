@@ -11,11 +11,13 @@ stylesheets[all][] = css/shop.css
 stylesheets[print][] = css/print.css
 
 regions[header] = Header
+regions[carttop] = Cart top
 regions[help] = Help
 
 regions[content] = Content
 regions[sidebar_first] = Sidebar first
 
+regions[bottom] = Bottom
 regions[footer] = Footer
 
 settings[shortcut_module_link] = 0

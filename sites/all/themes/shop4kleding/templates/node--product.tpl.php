@@ -116,12 +116,11 @@
 		<?php
 		foreach($content['product:field_image']['#items'] as $image)
 		{
-			
-			
 			?>
 		<div class="galleryimage">
-			<?php 
-			print theme('image_style', array('path' => $image['uri'], 'style_name' => 'thumbnail'));
+			<?php
+			$image_url = file_create_url($image['uri']);
+			print '<a href="'.$image_url.'" class="fancy" rel="productgallery">'.theme('image_style', array('path' => $image['uri'], 'style_name' => 'thumbnail')).'</a>';
 			?>
 		</div>
 			<?php

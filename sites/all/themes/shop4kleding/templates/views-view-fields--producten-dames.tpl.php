@@ -10,9 +10,4 @@
 		
 	</div>
 </div>
-<?php foreach ($fields as $id => $field): ?>
-<?php
 
-echo '<pre>';print_r($id);echo '</pre>';
-?>
-<?php endforeach; ?>
