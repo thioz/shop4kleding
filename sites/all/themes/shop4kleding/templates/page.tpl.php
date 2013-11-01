@@ -120,10 +120,6 @@
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
-
     <?php if ($page['sidebar_first']): ?>
       <div id="sidebar-first" class="column sidebar"><div class="section">
         <?php print render($page['sidebar_first']); ?>
@@ -132,13 +128,21 @@
 
     <div id="content" class="column"><div class="section">
       <a id="main-content"></a>
+		<?php if ($breadcrumb): ?>
+			<div class="clearfix">
+			<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+			</div>
+		<?php endif; ?>
+			
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
         <h1 class="title" id="page-title">
           <?php print $title; ?>
         </h1>
       <?php endif; ?>
+			
       <?php print render($title_suffix); ?>
+
       <?php if ($tabs): ?>
         <div class="tabs">
           <?php print render($tabs); ?>

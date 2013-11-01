@@ -22,6 +22,7 @@
 
 .product .info
 {
+	font-family: 'ubunturegular';
 	text-align: center;
 }
 
@@ -194,4 +195,35 @@ form.commerce-add-to-cart #edit-submit{
     font-weight: normal;
     font-style: normal;
 
+}
+
+#commerce-checkout-form-checkout fieldset
+{
+	border: none;
+	padding-top: 10px;
+}
+
+#commerce-checkout-form-checkout fieldset legend
+{
+	background: #ffffff;
+	font-family: 'ubunturegular', Arial;
+	border: none;
+}
+
+.view-commerce-cart-summary table
+{
+	font-family: 'ubunturegular', Arial;
+}
+
+.view-commerce-cart-summary table td,
+.view-commerce-cart-summary table tr
+{
+	background: none;
+	color: #000000;
+}
+
+.view-commerce-cart-summary table th 
+{
+	background: none;
+	color: #000000;
 }

@@ -13,30 +13,37 @@ body {
 a:link,
 a:visited {
   text-decoration: none;
+  color: #000000
 }
 a:hover,
 a:active,
 a:focus {
   text-decoration: underline;
 }
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0px;
 	padding: 0px;
 	font-family: 'ubunturegular', Verdana;
 }
+
 h1 {
   font-size: 1.357em;
   color: #000;
 }
+
 h2 {
   font-size: 1.143em;
 }
+
 p {
   margin: 0 0 1.2em;
 }
+
 del {
   text-decoration: line-through;
 }
+
 tr.odd {
   background-color: #dddddd;
 }
@@ -174,9 +181,7 @@ table {
 table table {
   font-size: 1em;
 }
-#footer-wrapper table {
-  font-size: 1em;
-}
+
 table tr th {
   background: #757575;
   background: rgba(0, 0, 0, 0.51);
@@ -479,7 +484,7 @@ h1#site-name {
 #main-menu ul.menu li:hover ul.menu
 {
 	display: block;
-	
+
 }
 
 #main-menu ul.menu li ul.menu
@@ -522,9 +527,11 @@ h1#site-name {
   background: #000000;
   color: #ffffff;
 }
+
 #main-menu-links li a.active {
   border-bottom: none;
 }
+
 .featured #main-menu-links li a:active,
 .featured #main-menu-links li a.active {
   background: #f0f0f0;
@@ -594,13 +601,14 @@ h1#site-name {
 
 /* ----------------- Content ------------------ */
 
-.content {
-  margin-top: 10px;
-}
+
 h1#page-title {
   font-size: 2em;
   line-height: 1;
+  font-family: 'ubunturegular';
+  font-weight: normal;
 }
+
 #content h2 {
   margin-bottom: 2px;
   font-size: 1.429em;
@@ -859,105 +867,41 @@ ul.links {
 
 /* ------------------ Footer ------------------ */
 
-#footer-wrapper {
-  color: #c0c0c0;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 0.857em;
-}
-#footer-wrapper a {
-  color: #fcfcfc;
-  color: rgba(255, 255, 255, 0.8);
-}
-#footer-wrapper a:hover,
-#footer-wrapper a:focus {
-  color: #fefefe;
-  color: rgba(255, 255, 255, 0.95);
-  text-decoration: underline;
-}
-#footer-wrapper .block {
-  margin: 20px 0;
-  border: 1px solid #444;
-  border-color: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-}
-#footer-columns .block-menu,
-#footer .block {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-#footer .block {
-  margin: 0.5em 0;
-}
-#footer .block .content {
-  padding: 0.5em 0;
-  margin-top: 0;
-}
-#footer .block h2 {
-  margin: 0;
-}
-#footer-columns h2 {
-  border-bottom: 1px solid #555;
-  border-color: rgba(255, 255, 255, 0.15);
-  font-size: 1em;
-  margin-bottom: 0;
-  padding-bottom: 3px;
-  text-transform: uppercase;
-}
-#footer-columns .content {
-  margin-top: 0;
-}
-#footer-columns p {
-  margin-top: 1em;
-}
-#footer-columns .content ul {
-  list-style: none;
-  padding-left: 0; /* LTR */
-  margin-left: 0;
-}
-#footer-columns .content li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#footer-columns .content li a {
-  display: block;
-  border-bottom: 1px solid #555;
-  border-color: rgba(255, 255, 255, 0.15);
-  line-height: 1.2;
-  padding: 0.8em 2px 0.8em 20px; /* LTR */
-  text-indent: -15px;
-}
-#footer-columns .content li a:hover,
-#footer-columns .content li a:focus {
-  background-color: #1f1f21;
-  background-color: rgba(255, 255, 255, 0.05);
-  text-decoration: none;
-}
 #footer {
-  letter-spacing: 0.2px;
-  margin-top: 30px;
-  border-top: 1px solid #555;
-  border-color: rgba(255, 255, 255, 0.15);
+	background: #cccccc;
+	border-radius: 8px;
+	margin-top: 8px;
+	height: 30px;
+	padding-top: 15px;
 }
-#footer .region {
-  margin-top: 20px;
-}
-#footer .block {
-  clear: both;
-}
+
 #footer ul,
 #footer li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+#block-menu-menu-footer-menu
+{
+	margin-left: 30px;
+}
+
+#block-menu-menu-footer-menu ul li 
+{
+	float: left;
+}
+
 #footer li a {
-  float: left; /* LTR */
+  
   padding: 0 12px;
   display: block;
   border-right: 1px solid #555; /* LTR */
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: #404040;
+  color: #404040;
+  font-family: 'ubunturegular';
+	font-size: 11px;
+	line-height: 14px;
 }
 #footer li.first a {
   padding-left: 0; /* LTR */
@@ -1682,5 +1626,21 @@ div.admin-panel .description {
 #bottom .block 
 {
 	font-family: 'ubunturegular', Arial;
-	
+}
+
+.region-sidebar-first .menu a.active
+{
+	font-weight: bold;
+}
+
+.view-demo-slider
+{
+	width: 960px;
+	height: 399px;
+	overflow: hidden;
+}
+
+.form-item label 
+{
+	font-family: 'ubunturegular', Arial;	
 }

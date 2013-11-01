@@ -114,19 +114,21 @@
   </div>
 	<div class="productimages clearfix">
 		<?php
-		foreach($content['product:field_image']['#items'] as $image)
+		if(isset($content['product:field_image']['#items']))
 		{
-			?>
-		<div class="galleryimage">
-			<?php
-			$image_url = file_create_url($image['uri']);
-			print '<a href="'.$image_url.'" class="fancy" rel="productgallery">'.theme('image_style', array('path' => $image['uri'], 'style_name' => 'thumbnail')).'</a>';
-			?>
-		</div>
-			<?php
+			foreach($content['product:field_image']['#items'] as $image)
+			{
+				?>
+			<div class="galleryimage">
+				<?php
+				$image_url = file_create_url($image['uri']);
+				print '<a href="'.$image_url.'" class="fancy" rel="productgallery">'.theme('image_style', array('path' => $image['uri'], 'style_name' => 'thumbnail')).'</a>';
+				?>
+			</div>
+				<?php
+			}
 		}
 		?>
-	 </pre>
 	</div>
   <div>
 		
@@ -150,15 +152,4 @@
   <?php endif; ?>
 
   <?php print render($content['comments']); ?>
-
-	
-	<?
-echo __FILE__;
-echo '<pre>';
-print_r(array_keys($content));
-
-
-echo '</pre>';
-
-	?>
 </div>

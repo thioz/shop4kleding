@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * (Un)Installscripts for Rabobank OmniKassa
+ */
+
+ /**
+  * Implements hook_uninstall().
+  * 
+  * Remove variables.
+  */
+function omnikassa_uninstall() {
+  variable_del('omnikassa_merchant_id');
+  variable_del('omnikassa_secret_key');
+  variable_del('omnikassa_key_version');
+  variable_del('omnikassa_reference');
+  variable_del('omnikassa_mode');
+}
