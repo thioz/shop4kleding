@@ -211,14 +211,33 @@
  * @endcode
  */
 $databases = array();
-   $databases['default']['default'] = array(
-     'driver' => 'mysql',
-     'database' => 'shop4kleding',
-     'username' => 'root',
-     'password' => 'th10z',
-     'host' => 'localhost',
-     'prefix' => '',
-   );
+
+$sHost = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : false;
+
+switch($sHost)
+{
+	case 'shop4kleding.sourcerer.nl':
+			$databases['default']['default'] = array(
+				'driver' => 'mysql',
+				'database' => 'sourcerer_shop4kleding',
+				'username' => 'sourcerer_site',
+				'password' => 'sT@yFr0sty',
+				'host' => 'localhost',
+				'prefix' => '',
+			);
+		break;
+	default:
+			$databases['default']['default'] = array(
+				'driver' => 'mysql',
+				'database' => 'shop4kleding',
+				'username' => 'root',
+				'password' => 'th10z',
+				'host' => 'localhost',
+				'prefix' => '',
+			);
+		break;
+}
+
 
 /**
  * Access control for update.php script.
